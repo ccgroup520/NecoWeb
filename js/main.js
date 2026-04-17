@@ -46,6 +46,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 { target: 4.1, suffix: 'w+', label: '公众号粉丝' },
                 { target: 14.4, suffix: 'w+', label: '站酷账号人气' }
             ]
+        },
+        other: {
+            title: '其他能力',
+            desc: '跨领域复合型人才：具备教学授课、招生转化、客户沟通、团队管理等非技术类核心能力。能够快速适应新领域，将技术思维迁移至业务场景，实现结果导向的高效执行。',
+            summary: '快速摘要：教学、销售、管理 — 技术之外的复合型可迁移能力展示。',
+            readingPath: ['个人定位', '跨领域能力展示', '能力矩阵', '校园经历', '技能工具'],
+            tags: ['教学与课程设计', '客户转化与谈判', '团队管理与协调', '快速学习适应'],
+            stats: [
+                { target: 10, suffix: 'w+', label: '单月个人业绩(元)' },
+                { target: 75, suffix: '%+', label: '招生转化率' },
+                { target: 90, suffix: '%+', label: '家长/客户好评率' },
+                { target: 30, suffix: '人', label: '摄制团队管理' }
+            ]
         }
     };
     

@@ -2106,6 +2106,56 @@ section {
 }
 
 /* ========================================
+   其他能力 - 能力矩阵
+   ======================================== */
+
+.capability-matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.capability-matrix-item {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    transition: var(--transition);
+}
+
+.capability-matrix-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+    border-color: var(--green-light);
+}
+
+.capability-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.capability-matrix-item h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.capability-matrix-item p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .capability-matrix-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* ========================================
    图片预览
    ======================================== */
 .lightbox-modal {
