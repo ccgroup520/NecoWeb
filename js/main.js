@@ -13,37 +13,38 @@ document.addEventListener('DOMContentLoaded', function() {
             title: '数据分析与运营',
             desc: '数据科学专业背景，围绕真实库存业务台账独立完成数据清洗、指标设计、分析拆解与 Tableau 可视化呈现，适合数据分析、BI、数据运营与经营分析相关岗位。',
             summary: '快速摘要：擅长把多 sheet 业务台账整理成可分析数据集，并输出可直接支持库存管理判断的专题看板。',
-            readingPath: ['个人定位', 'Tableau专题项目', '代表作品', '项目经历', '技能工具'],
-            tags: ['Python/Pandas', 'Tableau Public', '库存运营分析'],
+            readingPath: ['个人定位', 'Tableau专题项目', '项目经历', '实习经历', '技能工具'],
+            tags: ['Python/Pandas', 'Tableau Public', 'SQL/BI看板', '数据建模'],
             stats: [
-                { target: 41, suffix: '个', label: '原始台账梳理' },
-                { target: 100, suffix: '个', label: 'SKU 编码统一' },
-                { target: 4188, suffix: '条', label: '月度流转重构' },
-                { target: 349, suffix: '条', label: '明细数据标准化' }
+                { target: 5, suffix: 'w+', label: '进销存数据条' },
+                { target: 25, suffix: '%', label: '物流损耗降低' },
+                { target: 90, suffix: '%+', label: '人效提升' },
+                { target: 40, suffix: '万', label: '年化挽回损失(元)' }
             ]
         },
         it: {
             title: 'VibeCoding',
             desc: '深度掌握 Cursor、Claude Code、Trae 等前沿 AI 编码工具。熟练使用 Prompt Engineering 进行代码生成、复杂逻辑重构、Bug 调试与性能优化，具备将产品 Idea 快速转化为可交付代码的端到端能力。',
             summary: '快速摘要：AI Native 开发者，擅长用 Vibe Coding 模式将产品需求快速转化为可交付代码。',
-            readingPath: ['个人定位', 'AI 工作流', '独立项目', '技能工具', '实习经历'],
-            tags: ['Cursor/Claude', 'SwiftUI', 'AI Native'],
+            readingPath: ['个人定位', 'AI 工作流', '独立开发项目', 'ARABICA小程序', '实习经历', '技能工具'],
+            tags: ['Cursor/Claude', 'SwiftUI/iOS', 'Web全栈', '微信小程序'],
             stats: [
-                { target: 4, suffix: '+', label: '独立开发项目' },
+                { target: 5, suffix: '+', label: '独立开发项目' },
                 { target: 100, suffix: '%', label: 'AI 辅助编码' },
                 { target: 3, suffix: '+', label: '平台覆盖 (iOS/Web/小程序)' }
             ]
         },
         media: {
             title: '新媒体与视觉创意',
-            desc: '6年专业拍摄经验，集"文案策划+摄影+剪辑+运营"于一身。擅长小红书与公众号从0到1孵化，利用AI工具优化创作流，打造高视觉冲击力的爆款内容。',
+            desc: '6年专业拍摄经验，集"文案策划+摄影+剪辑+运营"于一身。擅长小红书与公众号从0到1孵化，利用AI工具优化创作流，打造高视觉冲击力的爆款内容。具备多平台矩阵搭建、团购转化及私域引流实战经验。',
             summary: '快速摘要：从内容策略到视觉执行全链路覆盖，兼顾传播效率与品牌质感。',
-            readingPath: ['个人定位', '核心案例', '账号数据', '摄影作品', '技能工具'],
-            tags: ['爆款内容策划', '专业摄影摄像', '全平台账号运营'],
+            readingPath: ['个人定位', '工作经历', '账号数据', '摄影作品', '校园经历', '技能工具'],
+            tags: ['爆款内容策划', '专业摄影摄像', '全平台运营', '商业转化'],
             stats: [
-                { target: 14.4, suffix: 'w+', label: '站酷账号人气' },
-                { target: 1150, suffix: '+', label: '站酷粉丝积累' },
-                { target: 18, suffix: '%', label: '浏览时长增长' }
+                { target: 100, suffix: 'w+', label: '单条视频播放量' },
+                { target: 10, suffix: '%+', label: '销售业绩提升' },
+                { target: 4.1, suffix: 'w+', label: '公众号粉丝' },
+                { target: 14.4, suffix: 'w+', label: '站酷账号人气' }
             ]
         }
     };
