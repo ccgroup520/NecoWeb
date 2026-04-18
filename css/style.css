@@ -2407,10 +2407,8 @@ body.lightbox-open {
 
 .vibe-project-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-direction: column;
+    gap: 8px;
     margin-bottom: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--border-color);
@@ -2422,13 +2420,24 @@ body.lightbox-open {
     color: var(--text-primary);
 }
 
+.vibe-project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
 .vibe-project-role {
     font-size: var(--text-sm);
-    color: var(--green-primary);
+    color: var(--text-secondary);
     font-weight: 500;
-    padding: 4px 12px;
-    background: var(--green-light);
-    border-radius: var(--radius-sm);
+}
+
+.vibe-project-role::before {
+    content: '·';
+    margin-right: 6px;
+    color: var(--text-muted);
 }
 
 .vibe-project-date {
