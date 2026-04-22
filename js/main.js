@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // 当前选中的岗位类型
-    let currentRole = 'it';
+    let currentRole = 'media';
     
     // 岗位配置
     const roleConfig = {
