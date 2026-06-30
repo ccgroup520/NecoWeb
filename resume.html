@@ -49,6 +49,16 @@
             gap: 14px;
         }
 
+        .sidebar-photo {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2.5px solid rgba(142,202,230,0.5);
+            display: block;
+            margin: 0 auto 8px;
+        }
+
         .sidebar-name {
             font-size: 24px;
             font-weight: 700;
@@ -158,6 +168,19 @@
             font-size: 8px;
         }
 
+        /* Main area eval items */
+        .main .eval-item {
+            color: #3a3a3a;
+            font-size: 9.5px;
+            padding-left: 12px;
+        }
+        .main .eval-item::before {
+            color: #1a1a2e;
+            content: "•";
+            left: 2px;
+            font-weight: 700;
+        }
+
         /* ===== Right Main ===== */
         .main {
             padding: 28px 22px 16px;
@@ -253,6 +276,7 @@
     <div class="resume">
         <!-- ===== 左侧边栏 ===== -->
         <div class="sidebar">
+            <img src="images/profile_photo.jpeg" alt="张轶隽" class="sidebar-photo">
             <div class="sidebar-name">张轶隽</div>
             <div class="sidebar-target">求职意向：新媒体运营</div>
 
@@ -303,14 +327,6 @@
                 </div>
             </div>
 
-            <!-- 自我评价 -->
-            <div class="sidebar-section">
-                <div class="sidebar-section-title">自我评价</div>
-                <div class="eval-item">集"策划+拍摄+剪辑+运营"于一身，能独立完成新媒体内容生产全链路闭环</div>
-                <div class="eval-item">数据科学背景驱动精准运营，拒绝盲目创作，用数据洞察指导内容方向</div>
-                <div class="eval-item">拥有从0到1孵化官方账号及运营4万+粉丝公众号的实战经验，熟悉多平台规则</div>
-                <div class="eval-item">极强自驱力与抗压能力，能快速适应新领域并高效执行</div>
-            </div>
         </div>
 
         <!-- ===== 右侧主体 ===== -->
@@ -416,6 +432,15 @@
                         <li>建立"脚本-拍摄-剪辑-审核"SOP流程，累计负责<strong>10+场</strong>大型校园活动全程摄制，团队协作效率提升<strong>30%</strong></li>
                     </ul>
                 </div>
+            </div>
+
+            <!-- 自我评价 -->
+            <div class="section">
+                <div class="section-title">自我评价 <span class="en">ABOUT ME</span></div>
+                <div class="eval-item">集"策划+拍摄+剪辑+运营"于一身，能独立完成新媒体内容生产全链路闭环</div>
+                <div class="eval-item">数据科学背景驱动精准运营，拒绝盲目创作，用数据洞察指导内容方向</div>
+                <div class="eval-item">拥有从0到1孵化官方账号及运营4万+粉丝公众号的实战经验，熟悉多平台规则</div>
+                <div class="eval-item">极强自驱力与抗压能力，能快速适应新领域并高效执行</div>
             </div>
         </div>
     </div>
