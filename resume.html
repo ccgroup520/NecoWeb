@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张轶隽 - 新媒体运营简历</title>
+    <style>
+        /* ===== Reset & Base ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+            font-size: 10px;
+            line-height: 1.5;
+            color: #2c2c2c;
+            background: #e8e8e8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .resume {
+            width: 210mm;
+            min-height: 297mm;
+            max-height: 297mm;
+            margin: 20px auto;
+            background: #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        @media print {
+            body { background: #fff; }
+            .resume { margin: 0; box-shadow: none; }
+        }
+
+        /* ===== Left Sidebar ===== */
+        .sidebar {
+            background: #1a1a2e;
+            color: #e0e0e0;
+            padding: 28px 18px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .sidebar-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 4px;
+            text-align: center;
+            margin-bottom: 2px;
+        }
+
+        .sidebar-target {
+            text-align: center;
+            font-size: 11px;
+            color: #8ecae6;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .sidebar-section-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #8ecae6;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+            padding-bottom: 3px;
+            border-bottom: 1.5px solid rgba(142,202,230,0.3);
+            text-transform: uppercase;
+        }
+
+        .sidebar-section { margin-bottom: 2px; }
+
+        .contact-list { list-style: none; }
+        .contact-list li {
+            font-size: 9.5px;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            line-height: 1.4;
+        }
+        .contact-list .icon {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+
+        .edu-item { margin-bottom: 8px; }
+        .edu-school {
+            font-size: 10.5px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.4;
+        }
+        .edu-detail {
+            font-size: 9px;
+            color: #b0b0b0;
+            margin-top: 1px;
+        }
+        .edu-gpa {
+            font-size: 9px;
+            color: #8ecae6;
+            margin-top: 2px;
+        }
+        .edu-honors {
+            font-size: 8.5px;
+            color: #a0a0a0;
+            margin-top: 3px;
+            line-height: 1.45;
+        }
+
+        .skill-group { margin-bottom: 8px; }
+        .skill-group-title {
+            font-size: 9.5px;
+            font-weight: 600;
+            color: #ddd;
+            margin-bottom: 3px;
+        }
+        .skill-group p {
+            font-size: 9px;
+            color: #b0b0b0;
+            line-height: 1.45;
+        }
+
+        .hobby-text {
+            font-size: 9px;
+            color: #b0b0b0;
+        }
+
+        .eval-item {
+            font-size: 9px;
+            color: #b8b8b8;
+            margin-bottom: 5px;
+            padding-left: 10px;
+            position: relative;
+            line-height: 1.5;
+        }
+        .eval-item::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #8ecae6;
+            font-size: 8px;
+        }
+
+        /* ===== Right Main ===== */
+        .main {
+            padding: 28px 22px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .section-title {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #1a1a2e;
+            letter-spacing: 2px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid #1a1a2e;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .section-title .en {
+            font-size: 8.5px;
+            font-weight: 400;
+            color: #999;
+            letter-spacing: 1px;
+        }
+
+        .exp-block { margin-bottom: 10px; }
+        .exp-block:last-child { margin-bottom: 0; }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+        .exp-title {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .exp-company {
+            font-size: 9.5px;
+            color: #555;
+            margin-left: 6px;
+            font-weight: 400;
+        }
+        .exp-date {
+            font-size: 9px;
+            color: #888;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .exp-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .exp-list li {
+            font-size: 9.5px;
+            line-height: 1.5;
+            padding-left: 12px;
+            position: relative;
+            margin-bottom: 2px;
+            color: #3a3a3a;
+        }
+        .exp-list li::before {
+            content: "•";
+            position: absolute;
+            left: 2px;
+            color: #1a1a2e;
+            font-weight: 700;
+        }
+        .exp-list li strong {
+            color: #c0392b;
+            font-weight: 700;
+        }
+
+        .highlight-badge {
+            display: inline-block;
+            background: #fff3cd;
+            color: #856404;
+            font-size: 8px;
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-weight: 600;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <!-- ===== 左侧边栏 ===== -->
+        <div class="sidebar">
+            <div class="sidebar-name">张轶隽</div>
+            <div class="sidebar-target">求职意向：新媒体运营</div>
+
+            <!-- 联系方式 -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">联系方式</div>
+                <ul class="contact-list">
+                    <li><span class="icon">📍</span>广东江门</li>
+                    <li><span class="icon">📱</span>18138989896</li>
+                    <li><span class="icon">✉️</span>2592702674@qq.com</li>
+                    <li><span class="icon">🔗</span>个人作品集网站在线可查</li>
+                </ul>
+            </div>
+
+            <!-- 教育背景 -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">教育背景</div>
+                <div class="edu-item">
+                    <div class="edu-school">广州南方学院</div>
+                    <div class="edu-detail">数据科学与大数据技术 · 本科 · 2022.09-2026.06</div>
+                    <div class="edu-gpa">GPA 3.69/4.0（专业前10%）</div>
+                    <div class="edu-honors">
+                        校级奖学金二等奖 · 优秀共青团员<br>
+                        最佳校园新闻奖一等奖<br>
+                        CET-4 · 普通话二甲 · 计算机二级(Python)
+                    </div>
+                </div>
+            </div>
+
+            <!-- 技能 -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">技能兴趣</div>
+                <div class="skill-group">
+                    <div class="skill-group-title">内容策划</div>
+                    <p>可0-1搭建账号，擅长热点文案，熟悉小红书、公众号、抖音、视频号运营</p>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-title">视觉制作</div>
+                    <p>熟练单反拍摄与布光，精通剪映、PR剪辑及PS，有百万+播放爆款作品</p>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-title">数据运营</div>
+                    <p>数据科学背景，能用Python做数据分析与爬虫，通过数据复盘优化内容策略</p>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-title">兴趣爱好</div>
+                    <p class="hobby-text">羽毛球、徒步、骑行、摄影</p>
+                </div>
+            </div>
+
+            <!-- 自我评价 -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">自我评价</div>
+                <div class="eval-item">集"策划+拍摄+剪辑+运营"于一身，能独立完成新媒体内容生产全链路闭环</div>
+                <div class="eval-item">数据科学背景驱动精准运营，拒绝盲目创作，用数据洞察指导内容方向</div>
+                <div class="eval-item">拥有从0到1孵化官方账号及运营4万+粉丝公众号的实战经验，熟悉多平台规则</div>
+                <div class="eval-item">极强自驱力与抗压能力，能快速适应新领域并高效执行</div>
+            </div>
+        </div>
+
+        <!-- ===== 右侧主体 ===== -->
+        <div class="main">
+            <!-- 实习经历 -->
+            <div class="section">
+                <div class="section-title">实习经历 <span class="en">INTERNSHIP</span></div>
+
+                <div class="exp-block">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-title">新媒体运营</span>
+                            <span class="exp-company">开平瑞趣旅游发展有限公司</span>
+                            <span class="highlight-badge">百万播放爆款</span>
+                        </div>
+                        <span class="exp-date">2026.03 - 2026.05</span>
+                    </div>
+                    <ul class="exp-list">
+                        <li>负责咖啡门店在<strong>抖音、小红书、视频号</strong>三大平台的日常内容矩阵搭建、短视频剪辑与图文运营</li>
+                        <li>统筹抖音团购套餐选品、上架及流量维护，打通"线上曝光→团购转化→线下核销"商业闭环</li>
+                        <li>策划打造单条播放量<strong>破百万</strong>的视频号爆款，整体销售业绩提升约<strong>10%</strong>，节假日高峰日营业额突破<strong>4000元</strong></li>
+                    </ul>
+                </div>
+
+                <div class="exp-block">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-title">新媒体运营助理</span>
+                            <span class="exp-company">广东拼播播新媒体有限公司（MCN）</span>
+                            <span class="highlight-badge">优秀实习生</span>
+                        </div>
+                        <span class="exp-date">2024.10 - 2025.01</span>
+                    </div>
+                    <ul class="exp-list">
+                        <li>利用<strong>Python爬虫</strong>抓取竞品近30天爆款笔记数据，提取核心关键词，制定"真实开箱+极限测评"内容策略</li>
+                        <li>产出<strong>2篇获赞5000+</strong>的爆款评测笔记，账号月度互动量环比增长<strong>35%</strong></li>
+                        <li>通过A/B Test优化封面与视觉呈现，为公司私域社群引流<strong>500+</strong>精准用户</li>
+                    </ul>
+                </div>
+
+                <div class="exp-block">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-title">拍摄助理 / 站酷运营</span>
+                            <span class="exp-company">摄视度商业摄影</span>
+                        </div>
+                        <span class="exp-date">2024.07 - 2024.09</span>
+                    </div>
+                    <ul class="exp-list">
+                        <li>负责20+款卫浴产品灯光布置、构图设计及后期初修，产出素材助力电商详情页点击率提升</li>
+                        <li>独立运营站酷账号，优化关键词搜索排名，账号人气达<strong>14.4万+</strong>，成功促成<strong>2单</strong>商业合作</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 运营经历 -->
+            <div class="section">
+                <div class="section-title">运营经历 <span class="en">OPERATIONS</span></div>
+
+                <div class="exp-block">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-title">微信公众号运营负责人</span>
+                            <span class="exp-company">广州南方学工部官方账号</span>
+                        </div>
+                        <span class="exp-date">2022.09 - 2024.06</span>
+                    </div>
+                    <ul class="exp-list">
+                        <li>统筹"招生-迎新-奖助-榜样-校园生活"五大场景内容策划，打造"国奖映像"等品牌栏目</li>
+                        <li>任期内粉丝量提升至<strong>4.1万+</strong>，日均浏览量近4000次，连续多月跻身<strong>全国高校前50强</strong></li>
+                        <li>多篇专题推文阅读量<strong>破万</strong>，覆盖超90%在校师生，最高取得全国周排名第12位</li>
+                    </ul>
+                </div>
+
+                <div class="exp-block">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-title">小红书官方号冷启动负责人</span>
+                            <span class="exp-company">广州南方学院</span>
+                        </div>
+                        <span class="exp-date">2023.09 - 2024.06</span>
+                    </div>
+                    <ul class="exp-list">
+                        <li>主导官方账号从0到1冷启动，确立"校园打卡+美图+实用资讯"内容赛道与视觉风格</li>
+                        <li>首月实现粉丝<strong>0→2000+</strong>突破，打造单篇获赞<strong>300+</strong>的爆款笔记，累计获赞与收藏<strong>1000+</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 校园经历 -->
+            <div class="section">
+                <div class="section-title">校园经历 <span class="en">CAMPUS</span></div>
+
+                <div class="exp-block">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-title">学生媒体中心 · 摄制部部长</span>
+                        </div>
+                        <span class="exp-date">2022.09 - 2024.06</span>
+                    </div>
+                    <ul class="exp-list">
+                        <li>统筹管理<strong>30人</strong>摄制团队，负责校级全媒体矩阵（微信/抖音/视频号）内容策划与大型活动跟拍</li>
+                        <li>建立"脚本-拍摄-剪辑-审核"SOP流程，累计负责<strong>10+场</strong>大型校园活动全程摄制，团队协作效率提升<strong>30%</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
